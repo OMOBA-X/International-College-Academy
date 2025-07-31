@@ -296,6 +296,7 @@ a{
     display: flex;
     justify-content: center;
     margin: 10px 0;
+    display: none;
   }
 
   .logo-img {
@@ -306,14 +307,10 @@ a{
     position: relative;
     z-index: 99;
     margin: 0 auto;
-    display: block;
+    display: none;
   }
 }
-
-
-
-  .white-container {
+ .white-container {
     background-color: rgba(53, 155, 12, 0.0);
   }
-git add .
 
