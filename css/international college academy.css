@@ -292,20 +292,20 @@ a{
     position: relative;
   }
 
-  .logo-img {
-  width: 22%; /* More visible on small screens */
-  max-width: 200px;
-  border: 1px solid goldenrod;
-  border-radius: 10px;
-  margin-top: -325%;
-  margin-left: 97px;
+.relative-wrapper {
   position: relative;
+}
+
+.logo-img {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  max-width: 150px;
   z-index: 99;
 }
 
-.logo-image{
-  display: block;
-}
 
   .white-container {
     background-color: rgba(53, 155, 12, 0.0);
