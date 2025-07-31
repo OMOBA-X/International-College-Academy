@@ -292,22 +292,28 @@ a{
     position: relative;
   }
 
-.relative-wrapper {
-  position: relative;
+.logo-image {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .logo-img {
+    width: 40%;
+    max-width: 150px;
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+    position: relative;
+    z-index: 99;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
-.logo-img {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40%;
-  max-width: 150px;
-  z-index: 99;
-}
 
 
   .white-container {
     background-color: rgba(53, 155, 12, 0.0);
   }
-}
+git add .
+
