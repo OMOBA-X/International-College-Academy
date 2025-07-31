@@ -34,7 +34,7 @@ body{
 .carousel {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.99);
   flex: 1;
-  height: 729px;
+  height: 695px;
   margin-top: -51px;
   margin-left: -32px;
   position: relative;
@@ -293,14 +293,14 @@ a{
   }
 
   .logo-img {
-  width: 28%; /* More visible on small screens */
+  width: 18%; /* More visible on small screens */
   max-width: 200px;
   display: block;
-  border: 3px solid goldenrod;
+  border: 1px solid goldenrod;
   border-radius: 10px;
-  margin-top: -20%;
-  margin-left: 90px;
-  position: relative;
+  margin-top: -195%;
+  margin-left: 97px;
+  position: absolute;
   z-index: 99;
 }
 
