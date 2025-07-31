@@ -17,7 +17,7 @@ body{
   padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
-  height: 86vh;
+  height: 84vh;
   border-radius: 12px;
   /* background-color: rgba(255, 3, 0, 0.99); */
 }
@@ -34,7 +34,7 @@ body{
 .carousel {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.99);
   flex: 1;
-  height: 799px;
+  height: 779px;
   margin-top: -51px;
   margin-left: -32px;
   position: relative;
@@ -105,7 +105,7 @@ body{
   margin-right: -35px;
   align-items: center;
   justify-content: center;
-  height: 87.3vh;
+  height: 85vh;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -190,7 +190,7 @@ h2{
 .footer-text{
   font-size: 0.8rem;
     color: black;
-    margin-top: 65px;
+    margin-top: 45px;
     font-weight: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
@@ -208,12 +208,6 @@ a{
 
 .logo-image{
   display: none;
-}
-
-.html, body{
-  overflow: hidden;
-  max-height: 100%;
-  min-height: 50%;
 }
 
 
