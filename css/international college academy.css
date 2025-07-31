@@ -34,7 +34,7 @@ body{
 .carousel {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.99);
   flex: 1;
-  max-height: 100vh;
+  max-height: 102vh;
   margin-top: -51px;
   margin-left: -32px;
   position: relative;
@@ -298,7 +298,7 @@ a{
   display: block;
   border: 1px solid goldenrod;
   border-radius: 10px;
-  margin-top: -295%;
+  margin-top: -325%;
   margin-left: 97px;
   position: relative;
   z-index: 99;
