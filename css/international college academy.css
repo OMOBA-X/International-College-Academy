@@ -210,6 +210,10 @@ a{
   display: none;
 }
 
+.html, body{
+  overflow: hidden;
+}
+
 
 /* Responsive stacking for mobile */
 @media (max-width: 900px) {
