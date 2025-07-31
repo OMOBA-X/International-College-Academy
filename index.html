@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/international college academy.css" />
+  <title>Login/Register</title>
+</head>
+
+<!-- Body Of Code Starts Here -->
+<body>
+  <div class="overlay">
+    <div class="white-container">
+    <div class="content-wrapper">
+    
+    <!-- Carousel -->
+    <div class="carousel">
+      <div class="slide active">
+        <img src="image/logo.jpg" class="carousel-img" />
+      </div>
+      <div class="slide">
+        <img src="image/slide2.jpg" class="carousel-img" />
+      </div>
+      <button class="nav prev" onclick="changeSlide(-1)">‹</button>
+      <button class="nav next" onclick="changeSlide(1)">›</button>
+    </div>
+
+    <!-- Form Section -->
+
+    <div class="form-container">
+      <div class="form-box">
+        <div class="form-toggle">
+          <button class="toggle-btn" onclick="showForm('login')">Student</button>
+          <button class="toggle-btn" onclick="showForm('register')">Teacher</button>
+        </div>
+
+        <div id="loginForm">
+          <h2>Student Login</h2>
+          <br><br><br>
+          <input type="text" placeholder="ID" />
+          <br><br><br>
+          <input type="password" placeholder="Password" />
+          <br><br><br><br>
+          <button>Login</button>
+          <p class="footer-text">New to our school. Click <a href="#"> here</a> to register</p>
+        </div>
+
+        
+
+        <div id="registerForm" style="display: none;">
+          <h2>Staff Login</h2><br><br><br>
+          <input type="text" placeholder="Staff ID" />
+          <br><br><br>
+          <input type="password" placeholder="Password" />
+          <br><br><br><br>
+          <button>Login</button>
+
+          <p class="footer-text">New to our school? Click <a href="#"> here</a> to register</p>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="logo-image">
+    <img class="logo-img" src="image/logo.jpg">
+  </div>
+      <div class="img-ovrly">
+      <img class="logo" src="image/logo-removebg-preview (2).png">
+      </div>  
+  </div>
+</div>
+
+<script>
+  let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+}
+
+function changeSlide(step) {
+  currentSlide = (currentSlide + step + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto-fade every 10s
+setInterval(() => changeSlide(1), 10000);
+showSlide(currentSlide); // Initial
+
+// Form toggle logic
+function showForm(formId) {
+  document.getElementById("loginForm").style.display = formId === "login" ? "block" : "none";
+  document.getElementById("registerForm").style.display = formId === "register" ? "block" : "none";
+}
+
+  const buttons = document.querySelectorAll(".toggle-btn");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      buttons.forEach(btn => btn.classList.remove("active")); // Remove from all
+      button.classList.add("active"); // Add to clicked one
+    });
+  });
+
+</script>
+</body>
+</html>

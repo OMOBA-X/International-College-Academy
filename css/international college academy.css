@@ -1,0 +1,322 @@
+*{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+body{
+    background-image: url(../image/login-bg.jpg);
+    background-repeat: none;
+    background-size: cover;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.99);
+
+}
+
+.white-container {
+  background-color: white;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 86vh;
+  border-radius: 12px;
+  /* background-color: rgba(255, 3, 0, 0.99); */
+}
+
+/* Horizontal Layout */
+.content-wrapper {
+  display: flex;
+  gap: 0; /* or gap: 0.5rem; for a tiny spacing */
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+/* Carousel */
+.carousel {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.99);
+  flex: 1;
+  height: 799px;
+  margin-top: -51px;
+  margin-left: -32px;
+  position: relative;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+}
+
+.overlay{
+  background-color: rgba(53, 155, 12, 0.4);
+  padding: 50px;
+  height: 89.4vh;
+  background-size: cover;
+  margin-top: -50px;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  margin-top: -30px;
+  object-fit: cover;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.0);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+  margin-left: -40%;
+}
+
+.next {
+  left: 10px;
+  margin-left: 300px;
+  position: absolute;
+}
+
+/* Form */
+.form-container {
+  flex: 1;
+  background-color: rgb(4, 73, 4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 1.7rem;
+  display: flex;
+  margin-top: -52px;
+  margin-right: -35px;
+  align-items: center;
+  justify-content: center;
+  height: 87.3vh;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form-box {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.99);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  height: 75vh;
+  padding: 40px;
+  max-width: 450px;
+}
+
+.form-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top:40px;
+}
+
+.toggle-btn {
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(196, 191, 191);
+  border-radius: 8px;
+  color:rgb(4, 73, 4);;
+}
+
+.toggle-btn:hover{
+    background-color:rgb(4, 73, 4);
+    color: whitesmoke; 
+}
+
+.toggle-btn:active{
+    background-color:chartreuse;
+    color:rgb(4, 73, 4);
+}
+
+
+input,
+button {
+  width: 97%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: rgb(230, 220, 220);
+  margin-top: 0.75rem;
+  border: 2.7px solid rgb(73, 10, 10);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+input:hover{
+  border: 1px solid maroon;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+
+button {
+  background: rgb(4, 73, 4);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 13px;
+  cursor: pointer;
+}
+
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(73, 10, 10);
+    margin-top: 52px;
+    text-align: center;
+}
+
+.footer-text{
+  font-size: 0.8rem;
+    color: black;
+    margin-top: 65px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+a{
+    color: maroon;
+    text-decoration: none;
+}
+
+.logo{
+  width: 20%;
+  display: none;
+}
+
+.logo-image{
+  display: none;
+}
+
+.html, body{
+  overflow: hidden;
+  max-height: 100%;
+  min-height: 50%;
+}
+
+
+/* Responsive stacking for mobile */
+@media (max-width: 900px) {
+  .content-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .carousel,
+  .form-container {
+    height: 400px;
+  }
+
+.overlay{
+  background-color: rgba(53, 155, 12, 0.4);
+  padding: 50px;
+  height: 120vh;
+  width: 100%;
+  background-size: cover;
+  margin-top: -50px;
+}
+
+body{
+    background-image: url(../image/login-bg.jpg);
+    background-repeat: none;
+    background-size: cover;
+    height: -10vh;
+    background-color: rgba(0, 0, 0, 0.99);
+
+}
+
+.form-container {
+  background-color: rgb(4, 73, 4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 1.7rem;
+  display: flex;
+  margin-top: 72px;
+  margin-left: -42px;
+  align-items: center;
+  width: 110%;
+  justify-content: center;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.white-container {
+ background-color: rgba(53, 155, 12, 0.0);
+
+}
+
+body {
+  position: relative; /* Makes body the reference point */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Faded background image */
+
+
+/* Form container */
+.form-box {
+  position: relative;
+  z-index: 2; /* Above the image */
+  background-image: url(../image/logo.jpg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.99);
+  object-fit: contain;
+  background-size: 300%;
+  height: 100vh;
+  background-blend-mode: soft-light; /* or multiply, overlay, etc. */
+  background-position: 5px 100px;
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.89); 
+  background-repeat: no-repeat;
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 450px;
+  height: 75vh;
+  margin: 86px auto 0 auto; 
+}
+
+.logo-image{
+  display: block;
+}
+
+.logo-img{
+  width: 20%;
+  border: 3px solid goldenrod;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 10;
+  margin-left: 30%;
+  margin-top: -225%;
+}
+
+
+/* html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+} */
+
+}
