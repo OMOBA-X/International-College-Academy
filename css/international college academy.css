@@ -153,8 +153,7 @@ body {
 
 
 input,
-button,
-#btn {
+button {
   width: 97%;
   padding: 0.75rem;
   font-size: 1rem;
@@ -175,16 +174,13 @@ input:hover {
 
 
 #btn {
-  padding: 20px;
-  display: flex;
-  background-color: rgb(4, 73, 4);
-  text-decoration: none;
-  color: #fff;
-  border-radius: 10px;
+ width: 120%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: rgb(230, 220, 220);
+  margin-top: 0.25rem;
+  border: none;
   text-align: center;
-  font-weight: bold;
-  font-style: normal;
-  width: 55%;
 }
 
 h2 {
