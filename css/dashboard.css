@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+}
+
+header {
+    background-color: rgb(4, 73, 4);
+    color: #fff;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 6px solid rgb(255, 183, 0);
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    display: flex;
+    margin-left: 4px;
+}
+
+.logo-text {
+    margin-top: 50px;
+    margin-left: 14px;
+    color: rgb(255, 183, 0);
+}
+
+.underling {
+    font-family: cursive;
+    font-size: 1rem;
+    margin-left: 5rem;
+    color: white;
+    font-weight: lighter;
+}
+
+.logo-img {
+    border: 3px solid goldenrod;
+    height: 1%;
+    line-height: 5.5;
+    display: flex;
+    width: 10%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+#logout{
+    color: rgb(4, 73, 4);
+    font-weight: bold;  
+    right: 0;
+    margin-right: 25px;
+    margin-top: -13px;
+    background-color: rgb(255, 183, 0);
+    padding: 12px;
+    position: absolute;
+    display:inline;
+    text-align: center;
+    width: 10ch;
+    border-radius: 7px;
+}
+
+#logout:hover{
+    background-color: rgb(4, 73, 4);
+    border: 3px solid rgb(255, 183, 0);
+    color: rgb(255, 183, 0);
+}
+
+nav {
+    margin-left: -10px;
+    display: flex;
+    font-size: 1.1rem;
+    gap: 3.5rem;
+    margin-right: 8rem;
+    padding: 1.3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav a {
+
+    color: rgb(255, 183, 0);
+    text-decoration: none;
+}
+
+nav a:hover{
+    color:deeppink;
+    background-color: #2a3f54;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: -4rem;
+    margin-left: 10px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: rgb(255, 183, 0);
+    margin: 3px 0;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-image: url(../image/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: 1px;
+    width: 95%;
+    padding: 10px;
+}
+
+.mobile-nav a {
+    color: rgb(4, 73, 4);
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    padding: 0.5rem;
+    line-height: 3.0;
+    width: 30%;
+    text-align: center;
+    background-color: rgb(4, 73, 4, 0.2);
+    background-clip:padding-box;
+}
+
+main {
+    padding-top: 0;
+}
+
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100vh;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Style */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 73, 4, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.overlay h2 {
+    font-size: 5.5rem;
+    margin-bottom: 1rem;
+    color: ghostwhite;
+    position: absolute;
+    margin-top: -17.5rem;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/* Optional navigation buttons style */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Section 2 */
+
+.section2{
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: ghostwhite;
+    height: auto;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    margin-top: 50px;
+    background: rgb(4, 73, 4);
+    padding: 1.5rem;
+    color: rgb(255, 183, 0);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Footer */
+
+.footer {
+  background-color: rgb(4, 73, 4);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 5px solid rgb(255, 183, 0);
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.school-name {
+  font-size: 1.6rem;
+  color: rgb(255, 183, 0);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  color: rgb(255, 183, 0);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+    *{
+        padding:0;  
+        margin: 0;
+    }
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-nav.active {
+        display: flex;
+    }
+
+    .logo {
+        margin-top: 25px;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    display: flex;
+    margin-left: 4px;
+}
+
+.logo-text {
+    width:10ch;
+    margin-top: 1px;
+    margin-left: 14px;
+    color: rgb(255, 183, 0);
+}
+
+.underling {
+    font-family: cursive;
+    font-size: 0.5rem;
+    margin-left: 0;
+    color: white;
+    font-weight: lighter;
+}
+
+.logo-img {
+    border: 2px solid goldenrod;
+    height: 15vh;
+    line-height: 5.5;
+    display: flex;
+    width: 37%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100vh;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Style */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 73, 4, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.overlay h2 {
+    font-size: 3.3rem;
+    margin-bottom: 1rem;
+    color: ghostwhite;
+    position: absolute;
+    margin-top: -17.5rem;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/* Optional navigation buttons style */
+ .prev,
+.next {
+    display: none;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+} 
+
+#logout{
+   position: absolute;
+   margin-top: 17.2rem;
+   margin-right: 10px;
+   padding: 1px;
+   background-color: rgba(214, 211, 5, 0.2);
+} 
+
+}

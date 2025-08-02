@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <body>
+  <header>
+    <div class="logo"><img class="logo-img" src="image/logo.jpg"><span class="logo-text">INTERNATIONAL COLLEGE ACADEMY<br><span class="underling">why be a king, when you can be a King Maker..</span></span></div>
+    <nav class="desktop-nav">
+      <a href="#">Home</a>
+      <a href="#">Students</a>
+      <a href="#">Teachers</a>
+      <a href="#">Classes</a>
+      <a href="#">Results</a>
+      <a id="logout" href="https://omoba-x.github.io/International-College-Academy/#">Log Out</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#">Home</a>
+    <a href="#">Students</a>
+    <a href="#">Teachers</a>
+    <a href="#">Classes</a>
+    <a href="#">Results</a>
+    <a id="logout" href="https://omoba-x.github.io/International-College-Academy/#">Log Out</a>
+  </div>
+  <main>
+    <div class="custom-carousel">
+  <div class="carousel-track">
+    <div class="slide">
+      <img src="image/dashboard-img1.png" alt="Slide 1">
+      <div class="overlay">
+        <h2>Welcome to Our School</h2>
+        <p>Empowering Students Through Innovation</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="image/dashboard-img2.png" alt="Slide 2">
+      <div class="overlay">
+        <h2>Modern Classrooms</h2>
+        <p>Technology-driven learning spaces</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="image/dashboard-img3.png" alt="Slide 3">
+      <div class="overlay">
+        <h2>Teamwork & Leadership</h2>
+        <p>We nurture responsible future leaders</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="image/dashboard-img-4.png" alt="Slide 4">
+      <div class="overlay">
+        <h2>Innovation Hub</h2>
+        <p>Where creativity meets technology</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="image/dashboard-img5.png" alt="Slide 5">
+      <div class="overlay">
+        <h2>Inclusive Community</h2>
+        <p>We value every student’s voice</p>
+      </div>
+
+      <div class="slide clone">
+  <img src="image/dashboard-img1.png" alt="Slide 1 Clone">
+  <div class="overlay">
+    <h2>Welcome to Our School</h2>
+    <p>Empowering Students Through Innovation</p>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+<div class="section2">
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3>Total Students</h3>
+        <p>530</p>
+      </div>
+      <div class="card">
+        <h3>Total Teachers</h3>
+        <p>45</p>
+      </div>
+      <div class="card">
+        <h3>Classes</h3>
+        <p>24</p>
+      </div>
+      <div class="card">
+        <h3>Pending Results</h3>
+        <p>12</p>
+      </div>
+    </div>
+    </div>
+
+    <footer class="footer">
+  <div class="footer-container">
+    <h2 class="school-name">International College Academy</h2>
+    <p>&copy; <span id="year"></span> International College Academy. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Admissions</a>
+      <a href="#">Privacy Policy</a>
+<span id="year"></span>
+      
+    </div>
+  </div>
+</footer>
+
+  </main>
+
+  <script>
+
+    // Hamburger Js
+
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('active');
+    }
+
+
+
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  let currentIndex = 0;
+  let isAnimating = false;
+  let slideInterval;
+
+  // Clone the first slide and append it
+  const firstClone = slides[0].cloneNode(true);
+  track.appendChild(firstClone);
+
+  const totalSlides = slides.length + 1; // include clone
+
+  function goToSlide(index) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    track.style.transition = 'transform 0.6s ease-in-out';
+    track.style.transform = `translateX(-${index * 100}%)`;
+    currentIndex = index;
+
+    setTimeout(() => {
+      if (currentIndex === totalSlides - 1) {
+        // If it's the clone, jump to the real first
+        track.style.transition = 'none';
+        track.style.transform = `translateX(0%)`;
+        currentIndex = 0;
+      }
+      isAnimating = false;
+    }, 600);
+  }
+
+  function showNextSlide() {
+    goToSlide(currentIndex + 1);
+  }
+
+  function showPrevSlide() {
+    if (isAnimating) return;
+
+    if (currentIndex === 0) {
+      isAnimating = true;
+      // Jump to clone's position instantly, then transition back
+      track.style.transition = 'none';
+      track.style.transform = `translateX(-${(totalSlides - 1) * 100}%)`;
+      currentIndex = totalSlides - 1;
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          track.style.transition = 'transform 0.6s ease-in-out';
+          goToSlide(currentIndex - 1);
+        });
+      });
+    } else {
+      goToSlide(currentIndex - 1);
+    }
+  }
+
+  function startAutoSlide() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(() => {
+      showNextSlide();
+    }, 6000);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    showNextSlide();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    clearInterval(slideInterval);
+    showPrevSlide();
+    startAutoSlide();
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    startAutoSlide();
+    goToSlide(0);
+  });
+
+    document.getElementById("year").textContent = new Date().getFullYear()
+</script>
+
+
+</body>
+</html>
