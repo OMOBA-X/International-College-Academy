@@ -151,8 +151,7 @@ body{
 }
 
 
-input,
-button {
+input {
   width: 97%;
   padding: 0.75rem;
   font-size: 1rem;
