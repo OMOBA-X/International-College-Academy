@@ -174,7 +174,6 @@ input:hover {
 
 
 #btn {
-  position: absolute;
   padding: 20px;
   display: flex;
   background-color: rgb(4, 73, 4);
