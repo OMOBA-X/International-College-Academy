@@ -130,8 +130,7 @@ body{
 }
 
 .toggle-btn {
-  width: 30%;
-  padding: 1rem;
+  padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
   background-color: rgb(196, 191, 191);
