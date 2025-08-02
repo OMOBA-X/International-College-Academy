@@ -28,7 +28,7 @@ header {
 }
 
 .logo-text {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 14px;
     color: rgb(255, 183, 0);
 }
@@ -75,15 +75,14 @@ header {
 nav {
     margin-left: -10px;
     display: flex;
-    font-size: 1.1rem;
-    gap: 3.5rem;
+    font-size: 0.9rem;
+    gap: 1.5rem;
     margin-right: 8rem;
     padding: 1.3rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav a {
-
     color: rgb(255, 183, 0);
     text-decoration: none;
 }
@@ -183,7 +182,7 @@ main {
 }
 
 .overlay h2 {
-    font-size: 5.5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
     color: ghostwhite;
     position: absolute;
