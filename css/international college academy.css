@@ -130,6 +130,7 @@ body{
 }
 
 .toggle-btn {
+  width: 30%;
   padding: 1rem;
   font-weight: bold;
   cursor: pointer;
