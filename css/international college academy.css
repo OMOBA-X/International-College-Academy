@@ -135,7 +135,7 @@ body{
   cursor: pointer;
   background-color: rgb(196, 191, 191);
   border-radius: 8px;
-  color: rgb(255, 183, 0);
+  color:rgb(4, 73, 4);
 }
 
 .toggle-btn:hover{
@@ -170,7 +170,7 @@ input:hover{
 }
 
 
-button {
+.button {
   background: rgb(4, 73, 4);
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -182,7 +182,7 @@ button {
 
 h2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(255, 183, 0);
+    color:rgb(73, 10, 10);
     margin-top: 52px;
     text-align: center;
 }
