@@ -1,14 +1,14 @@
-*{
-    margin: 0 auto;
-    margin-top: 20px;
+* {
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
-body{
-    background-image: url(../image/login-bg.jpg);
-    background-repeat: none;
-    background-size: cover;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.99);
+body {
+  background-image: url(../image/login-bg.jpg);
+  background-repeat: none;
+  background-size: cover;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.99);
 
 }
 
@@ -25,7 +25,8 @@ body{
 /* Horizontal Layout */
 .content-wrapper {
   display: flex;
-  gap: 0; /* or gap: 0.5rem; for a tiny spacing */
+  gap: 0;
+  /* or gap: 0.5rem; for a tiny spacing */
   align-items: stretch;
   flex-wrap: nowrap;
 }
@@ -42,7 +43,7 @@ body{
   overflow: hidden;
 }
 
-.overlay{
+.overlay {
   background-color: rgba(53, 155, 12, 0.4);
   padding: 50px;
   height: 89.4vh;
@@ -126,7 +127,7 @@ body{
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 1rem;
-  margin-top:40px;
+  margin-top: 40px;
 }
 
 .toggle-btn {
@@ -137,17 +138,17 @@ body{
   border-radius: 8px;
   border-bottom: none;
   box-shadow: rgba(0, 0, 0, 0.99);
-  color:rgb(4, 73, 4);
+  color: rgb(4, 73, 4);
 }
 
-.toggle-btn:hover{
-    background-color:rgb(4, 73, 4);
-    color: whitesmoke; 
+.toggle-btn:hover {
+  background-color: rgb(4, 73, 4);
+  color: whitesmoke;
 }
 
-.toggle-btn:active{
-    background-color:chartreuse;
-    color:rgb(4, 73, 4);
+.toggle-btn:active {
+  background-color: chartreuse;
+  color: rgb(4, 73, 4);
 }
 
 
@@ -164,7 +165,7 @@ button {
   border-right: none;
 }
 
-input:hover{
+input:hover {
   border: 1px solid maroon;
   border-top: none;
   border-left: none;
@@ -174,49 +175,46 @@ input:hover{
 
 #btn {
   position: absolute;
+  padding: 25px;
   background-color: rgb(4, 73, 4);
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  padding: 50px;
-  width: 30%;
+  text-decoration: none;
+  color: #fff;
   text-align: center;
-  border: none;
-  border-radius: 6px;
-  padding: 13px;
-  cursor: pointer;
+  width: 30%;
 }
 
-h2{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:rgb(73, 10, 10);
-    margin-top: 52px;
-    text-align: center;
+h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(73, 10, 10);
+  margin-top: 52px;
+  text-align: center;
 }
 
-.footer-text{
+.footer-text {
   font-size: 0.8rem;
-    color: black;
-    margin-top: 85px;
-    font-weight: bold;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
+  color: black;
+  margin-top: 85px;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
 }
 
-a{
-    color: maroon;
-    text-decoration: none;
+a {
+  color: maroon;
+  text-decoration: none;
 }
 
-.logo{
+.logo {
   width: 20%;
   display: none;
 }
 
-.logo-image{
+.logo-image {
   display: none;
 }
 
-.html, body{
+.html,
+body {
   overflow: hidden;
   min-height: 80%;
 }
@@ -228,7 +226,8 @@ a{
     box-sizing: border-box;
   }
 
-  html, body {
+  html,
+  body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -270,7 +269,8 @@ a{
     padding: 1.7rem;
     display: flex;
     margin-top: 10px;
-    margin-left: -30px; /* centered horizontally */
+    margin-left: -30px;
+    /* centered horizontally */
     align-items: center;
     justify-content: center;
     width: 120%;
@@ -286,7 +286,7 @@ a{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: rgba(255, 255, 255, 0.89); 
+    background-color: rgba(255, 255, 255, 0.89);
     padding: 40px;
     border-radius: 10px;
     width: 110%;
@@ -298,7 +298,7 @@ a{
     position: relative;
   }
 
-.logo-image {
+  .logo-image {
     display: flex;
     justify-content: center;
     margin: 10px 0;
@@ -316,7 +316,7 @@ a{
     display: none;
   }
 }
- .white-container {
-    background-color: rgba(53, 155, 12, 0.0);
-  }
 
+.white-container {
+  background-color: rgba(53, 155, 12, 0.0);
+}
