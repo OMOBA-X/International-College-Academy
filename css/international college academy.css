@@ -135,6 +135,8 @@ body{
   cursor: pointer;
   background-color: rgb(196, 191, 191);
   border-radius: 8px;
+  border-bottom: none;
+  box-shadow: rgba(0, 0, 0, 0.99);
   color:rgb(4, 73, 4);
 }
 
@@ -171,9 +173,13 @@ input:hover{
 
 
 .button {
-  background: rgb(4, 73, 4);
+  position: absolute;
+  background-color: rgb(4, 73, 4);
   color: rgb(255, 255, 255);
   font-weight: bold;
+  padding: 50px;
+  width: 24%;
+  text-align: center;
   border: none;
   border-radius: 6px;
   padding: 13px;
@@ -190,7 +196,7 @@ h2{
 .footer-text{
   font-size: 0.8rem;
     color: black;
-    margin-top: 45px;
+    margin-top: 85px;
     font-weight: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
