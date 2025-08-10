@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/dashboard.css" />
     <title>Dashboard</title>
 </head>
 
 <body>
-
     <header>
         <div class="logo">
-            <img class="logo-img" src="image/logo.jpg" alt="Logo">
+            <img class="logo-img" src="image/logo.jpg" alt="Logo" />
             <span class="logo-text">
-                INTERNATIONAL COLLEGE ACADEMY<br>
+                INTERNATIONAL COLLEGE ACADEMY<br />
                 <span class="underling">Why be a king, when you can be a King Maker..</span>
             </span>
         </div>
@@ -73,35 +72,35 @@
         <div class="custom-carousel">
             <div class="carousel-track">
                 <div class="slide">
-                    <img src="image/dashboard-img1.png" alt="Slide 1">
+                    <img src="image/dashboard-img1.png" alt="Slide 1" loading="lazy" />
                     <div class="overlay">
                         <h2>Welcome to Our School</h2>
                         <p>Empowering Students Through Innovation</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="image/dashboard-img2.png" alt="Slide 2">
+                    <img src="image/dashboard-img2.png" alt="Slide 2" loading="lazy" />
                     <div class="overlay">
                         <h2>Modern Classrooms</h2>
                         <p>Technology-driven learning spaces</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="image/dashboard-img3.png" alt="Slide 3">
+                    <img src="image/dashboard-img3.png" alt="Slide 3" loading="lazy" />
                     <div class="overlay">
                         <h2>Teamwork & Leadership</h2>
                         <p>We nurture responsible future leaders</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="image/dashboard-img-4.png" alt="Slide 4">
+                    <img src="image/dashboard-img-4.png" alt="Slide 4" loading="lazy" />
                     <div class="overlay">
                         <h2>Innovation Hub</h2>
                         <p>Where creativity meets technology</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="image/dashboard-img5.png" alt="Slide 5">
+                    <img src="image/dashboard-img5.png" alt="Slide 5" loading="lazy" />
                     <div class="overlay">
                         <h2>Inclusive Community</h2>
                         <p>We value every student’s voice</p>
@@ -249,6 +248,22 @@
             // Start the carousel on page load
             startAutoSlide();
         });
+
+        let timeout;
+        dropdownTrigger.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+                dropdownMenu.style.display = 'none';
+            }, 300); // 300ms delay before hiding
+        });
+
+        dropdownMenu.addEventListener('mouseenter', () => {
+            clearTimeout(timeout); // Cancel hiding if the user moved into the dropdown
+        });
+
+        dropdownMenu.addEventListener('mouseleave', () => {
+            dropdownMenu.style.display = 'none'; // Hide when mouse leaves dropdown
+        });
+
     </script>
 </body>
 
