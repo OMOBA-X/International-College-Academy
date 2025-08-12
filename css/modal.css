@@ -1,0 +1,132 @@
+/* modal.css */
+
+/* Modal Background */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow-y: auto; 
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 20px;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 95%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-btn {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+.close-btn:hover {
+    color: red;
+}
+
+/* Student Info */
+.student-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.student-info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.student-info h2 {
+    margin: 0 0 5px;
+    color: #007b5e;
+}
+.student-info p {
+    margin: 3px 0;
+}
+
+/* Results Table */
+#resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+#resultsTable th, 
+#resultsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+#resultsTable th {
+    background-color: #007b5e;
+    color: #fff;
+}
+#resultsTable input {
+    width: 90%;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Buttons */
+#addSubjectBtn, 
+#saveResultsBtn {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#addSubjectBtn {
+    background-color: #007bff;
+    color: white;
+}
+#addSubjectBtn:hover {
+    background-color: #0056b3;
+}
+#saveResultsBtn {
+    background-color: #28a745;
+    color: white;
+}
+#saveResultsBtn:hover {
+    background-color: #1e7e34;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .student-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .student-info img {
+        width: 100px;
+        height: 100px;
+    }
+    #resultsTable th, 
+    #resultsTable td {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+}
